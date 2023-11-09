@@ -1,7 +1,7 @@
 import { NavigationContainer } from '@react-navigation/native';
 import React, { Component, useState } from 'react';
 import * as Animatable from 'react-native-animatable';
-import { ImageBackground, Text, StyleSheet, TextInput, View, Image, Modal, TouchableOpacity } from 'react-native';
+import { ImageBackground, Alert, Text, StyleSheet, TextInput, View, Image, Modal, TouchableOpacity } from 'react-native';
 import { MaterialIcons} from '@expo/vector-icons'
 
 export default function WelcomeScreen({ navigation }) {
@@ -60,10 +60,14 @@ export default function WelcomeScreen({ navigation }) {
                     {
                         mail = email;
                         pass = password;
-                        if (mail=="ke" && pass=="dd") 
+                        if (mail=="K" && pass=="K") 
                         {navigation.navigate('HomeScreen');
                         setModalVisible(false);
-                    }}
+                    }
+                else {
+                    Alert.alert(" Wrong E-mail or Password !! Try Again")
+                }
+            }
                 }>
                     <Text style={{color: 'grey', fontSize: 25, padding: 10,}}>Login</Text>
                 </TouchableOpacity>
@@ -129,6 +133,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         borderWidth: 0.5,
         backgroundColor: 'grey',
+        fontSize: 15
     },
 
     registerButton: {

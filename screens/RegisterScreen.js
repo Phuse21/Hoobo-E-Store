@@ -14,7 +14,7 @@ export default function RegisterScreen({ navigation }) {
                    <TextInput maxLength={20} style={styles.Details} placeholder= '    E-mail (name@example.com)'/>
                    <TextInput maxLength= {20} style={styles.Details} placeholder= '   Password'/>
                    <TouchableOpacity 
-                onPress={() => navigation.navigate('LoginScreen')}
+                onPress={() => navigation.navigate('HomeScreen')}
                 style={styles.registerButton1}>
                     <Text style={{color: 'deepskyblue', fontSize: 25, padding: 10,}}>Register</Text>
                 </TouchableOpacity>
@@ -43,10 +43,10 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
     },
 
-    registerButton: {
+    registerButton1: {
         alignItems: 'center',
         width: '100%',
-        top: 700,
+        top: 100,
         borderColor: 'grey',
         borderRadius: 20,
     }

@@ -20,7 +20,7 @@ export default function WelcomeScreen({ navigation }) {
                 <TouchableOpacity 
                 onPress={() => setModalVisible(true)}
                 style={styles.loginButton}>
-                    <Text style={{color: 'white', fontSize: 25, padding: 10,}}>Login</Text>
+                    <Text style={{color: 'white', fontSize: 25, padding: 10, }}>Login</Text>
                 </TouchableOpacity>
                 
                 <Modal
